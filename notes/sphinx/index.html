@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../favicon.ico">
+        
+
+	<title>Building a Document Management Toolchain using Sphinx - OpenIndiana Docs (Demo 2.0)</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">OpenIndiana Docs (Demo 2.0)</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../misc/about/">About OpenIndiana Docs</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../misc/pdl/">Public Documentation License</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contrib <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../contrib/getting-started/">Getting Started</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../contrib/tools/">Doc Team Tools</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../contrib/roles/">Doc Team Roles</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../contrib/markdown/">Markdown Syntax Guide</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../contrib/style/">Doc Team Style Guide</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../misc/faq/">OpenIndiana FAQ</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../handbook/handbook/">OpenIndiana Handbook</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../misc/conduct/">Code of Conduct</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Dev</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../dev/userland/">Building oi-userland</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../books/">The OpenSolaris Redistributable Books</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../bsd/">Content Management - The BSD Approach</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../content/">OpenIndiana Content Creation</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../project/">Improving the OpenIndiana Project</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../README/">GitHub Readme</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Building a Document Management Toolchain using Sphinx</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../toolchain/">Continuous Integration Content Management</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../topics/">Topics to write about</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../README/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../toolchain/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/makruger/website-2.0">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#building-a-document-management-toolchain-using-sphinx">Building a Document Management Toolchain using Sphinx</a></li>
+        
+            <li><a href="#introduction">Introduction</a></li>
+        
+            <li><a href="#tool-chain-installation">Tool chain installation</a></li>
+        
+            <li><a href="#using-sphinx">Using Sphinx</a></li>
+        
+            <li><a href="#references">References:</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="building-a-document-management-toolchain-using-sphinx">Building a Document Management Toolchain using Sphinx</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This article looks at the Sphinx documentation management framework and how it could be used as part of a document management toolchain.
+Sphinx is a python based docs framework and uses RestructuredText as it's text markup language.</p>
+<h3 id="system-characteristics">System Characteristics</h3>
+<ul>
+<li>Easy to use</li>
+<li>TOC is easy to navigate.</li>
+<li>Produces a very professional looking end product.</li>
+<li>Processes text markup into highly polished, searchable and indexed HTML docs (as well as PDF and EPUB).</li>
+<li>Produces chunked HTML by means of pulling together several smaller documents into one larger document.</li>
+</ul>
+<h3 id="editing-tools">Editing tools</h3>
+<ul>
+<li>As a text markup any text editor can be used.</li>
+<li>There is a VIM plugin for RestructuredTEXT named RIV, which provides text folding, syntax highlighting, etc., but it's rather buggy.</li>
+<li>Another available plugin is InstantRST which provides a realtime text parsing webserver to provide you realtime feedback for your edits.</li>
+</ul>
+<h2 id="tool-chain-installation">Tool chain installation</h2>
+<p>You can install Sphinx on OpenIndiana Hipster, but latex is required for converting documents to PDF.
+I'm not sure whether latex is available on Hipster.</p>
+<h3 id="linux-mint-172">Linux Mint 17.2</h3>
+<ul>
+<li><code>sudo apt-get install git</code></li>
+<li><code>sudo apt-get install python-sphinx</code></li>
+<li><code>pip install https://github.com/Rykka/instant-rst.py/archive/master.zip</code></li>
+</ul>
+<h3 id="openindiana-hipster">OpenIndiana Hipster</h3>
+<ul>
+<li><code>pkg install git</code></li>
+<li><code>pkg install pip</code></li>
+<li><code>pip install sphinx</code></li>
+<li><code>pip install https://github.com/Rykka/instant-rst.py/archive/master.zip</code></li>
+</ul>
+<h3 id="setup-vim-for-using-sphinx">Setup VIM for using Sphinx</h3>
+<ul>
+<li>Configure Vundle for VIM (Vundle is used to manage VIM plugins)<ul>
+<li>backup your VIM configuration by renaming your existing .vimrc and .vim folder</li>
+<li><code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code></li>
+<li>Configure .vimrc for vundle per: <a href="https://github.com/VundleVim/Vundle.vim">https://github.com/VundleVim/Vundle.vim</a></li>
+</ul>
+</li>
+<li>Add plugins to .vimrc and use vundle to install the plugins<ul>
+<li>Configure .vimrc for <code>Plugin 'Rykka/riv.vim'</code></li>
+<li>Configure .vimrc for <code>Plugin 'Rykka/InstantRst'</code></li>
+<li>From within VIM, run <code>:PluginInstall</code> to process/install the plugins</li>
+</ul>
+</li>
+</ul>
+<h2 id="using-sphinx">Using Sphinx</h2>
+<h3 id="getting-started">Getting Started</h3>
+<ul>
+<li>Create a new repository on GitHub.</li>
+<li>Clone your repository to your local machine.</li>
+<li>cd into the directory creating by <code>git clone</code>.</li>
+<li>Configure Sphinx<ul>
+<li><code>sphinx-quickstart</code>  (Note: For help on this, see the Sphinx website, which explains all the options.)</li>
+</ul>
+</li>
+</ul>
+<h3 id="writing-your-docs">Writing your docs</h3>
+<ul>
+<li>Write your docs using RestructuredTEXT - (See the Sphinx website for guidance)<ul>
+<li>Sphinx docs use the .rst file name extension.</li>
+</ul>
+</li>
+<li>Add finished doc file names to the <em>Table of Contents</em> (TOC) which is located in <code>Index.rst</code>.</li>
+</ul>
+<h3 id="add-work-products-to-git">Add work products to GIT</h3>
+<ul>
+<li>Create and configure a <code>.gitignore</code> as appropriate.</li>
+<li><code>git status</code></li>
+<li><code>git add &lt;file(s)&gt;</code></li>
+<li><code>git commit</code></li>
+<li><code>git push</code></li>
+</ul>
+<h3 id="process-your-docs-into-html">Process your docs into HTML</h3>
+<ul>
+<li>Generate html output by executing the command <code>make html</code> from within the Sphinx <code>_build</code> directory.<ul>
+<li>Finished docs are found in the <code>_build/html</code> directory.</li>
+<li>Images, css, javascript, etc., are found in <code>_build/html/_static</code></li>
+<li>Source RestructuredTEXT files are copied to <code>_build/html/_source</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="share-your-work">Share your work</h3>
+<ul>
+<li>When satisfied with HTML output, submit git pull requests to other members of the doc team.</li>
+<li>When doc team is satisfied with state of GitHub repository, a member of the doc team would clone the repository and generate the final HTML for display on the OI website.</li>
+</ul>
+<h2 id="references">References:</h2>
+<ul>
+<li><a href="http://www.sphinx-doc.org/en/stable/tutorial.html">http://www.sphinx-doc.org/en/stable/tutorial.html</a></li>
+<li><a href="http://www.sphinx-doc.org/en/stable/tutorial.html">https://github.com/VundleVim/Vundle.vim</a></li>
+<li><a href="http://www.sphinx-doc.org/en/stable/tutorial.html">https://github.com/Rykka/riv.vim</a></li>
+<li><a href="http://www.sphinx-doc.org/en/stable/tutorial.html">https://github.com/Rykka/InstantRst</a></li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <center>Copyright &copy; 2016 <a href="http://www.openindiana.org">The OpenIndiana Docs Team</a></center>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
